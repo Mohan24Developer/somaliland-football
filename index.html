@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="so">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a15">
+  <meta name="description" content="Somaliland football fixtures, scores and competitions">
+  <title>Somaliland Football</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">⚽</span><span><b>Somaliland Football</b><small data-t="tagline">Kubadda cagta oo dhan, hal meel</small></span></a>
+    <nav><a href="#matches" data-t="navMatches">Ciyaaraha</a><a href="#competitions" data-t="navComps">Tartamada</a><a href="#table" data-t="navTable">Kala sarreynta</a><a href="#admin" data-t="navAdmin">Maamulka</a></nav>
+    <button id="language" class="language" type="button">EN</button>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div><p class="eyebrow" data-t="eyebrow">Kubadda cagta Somaliland</p><h1 data-t="heroTitle">Dhammaan ciyaaraha.<br><span>Hal meel.</span></h1><p class="hero-copy" data-t="heroCopy">La soco jadwalka, natiijooyinka iyo tartamada kubadda cagta Somaliland—ragga, dumarka iyo da’ kasta.</p><a class="button" href="#matches" data-t="seeMatches">Eeg ciyaaraha <span>→</span></a></div>
+      <div class="hero-panel"><div class="panel-top"><span data-t="today">Ciyaaraha maanta</span><span class="live-dot"><i></i><span data-t="demo">Tusaale</span></span></div><div class="hero-match"><span>Hargeisa City</span><b>VS</b><span>Borama FC</span></div><div class="hero-match"><span>Berbera FC</span><b>VS</b><span>Sahil FC</span></div><small data-t="sampleNote">Xog tusaale ah — ma aha natiijooyin rasmi ah</small></div>
+    </section>
+    <section class="stats"><article><b id="match-count">0</b><span data-t="matches">Ciyaaraha</span></article><article><b>4</b><span data-t="competitionCount">Tartamada tusaalaha</span></article><article><b>2</b><span data-t="languages">Luqadood</span></article></section>
+    <section id="matches" class="section"><div class="section-heading"><div><p class="eyebrow" data-t="fixturesEyebrow">Jadwalka</p><h2 data-t="fixturesTitle">Ciyaaraha soo socda</h2></div><span class="tag" data-t="sampleData">Xog tusaale ah</span></div><div id="fixture-list" class="fixture-list"></div></section>
+    <section id="competitions" class="section"><div class="section-heading"><div><p class="eyebrow" data-t="competitionEyebrow">Dalka oo dhan</p><h2 data-t="competitionTitle">Tartamada</h2></div></div><div class="competition-grid" id="competition-list"></div></section>
+    <section id="table" class="section"><div class="section-heading"><div><p class="eyebrow" data-t="tableEyebrow">Horyaalka tusaalaha</p><h2 data-t="tableTitle">Kala sarreynta</h2></div><span class="tag" data-t="sampleData">Xog tusaale ah</span></div><div class="table-wrap"><table><thead><tr><th>#</th><th data-t="team">Koox</th><th>C</th><th>G</th><th>B</th><th>L</th><th data-t="points">Dhibco</th></tr></thead><tbody><tr><td>1</td><td>Hargeisa City</td><td>12</td><td>9</td><td>2</td><td>1</td><td><b>29</b></td></tr><tr><td>2</td><td>Borama FC</td><td>12</td><td>8</td><td>3</td><td>1</td><td><b>27</b></td></tr><tr><td>3</td><td>Berbera FC</td><td>12</td><td>7</td><td>2</td><td>3</td><td><b>23</b></td></tr><tr><td>4</td><td>Sahil FC</td><td>12</td><td>5</td><td>2</td><td>5</td><td><b>17</b></td></tr></tbody></table></div></section>
+    <section id="admin" class="section admin"><div><p class="eyebrow" data-t="adminEyebrow">Qaybta maamulka</p><h2 data-t="adminTitle">Ku dar ciyaar</h2><p data-t="adminCopy">Foomkan hadda waa demo browser-ka ku shaqeeya; wali ma laha login ama kayd xog wadaag ah.</p></div><form id="match-form"><label><span data-t="homeTeam">Kooxda 1</span><input id="home" required placeholder="Hargeisa City"></label><label><span data-t="awayTeam">Kooxda 2</span><input id="away" required placeholder="Borama FC"></label><label><span data-t="date">Taariikhda</span><input id="date" type="date" required></label><button class="button" type="submit" data-t="addMatch">Ku dar ciyaar</button></form></section>
+  </main>
+  <footer><span>© Somaliland Football</span><span data-t="footerNote">Prototype — xogtu weli ma aha mid rasmi ah.</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
