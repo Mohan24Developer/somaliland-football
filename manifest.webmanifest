@@ -1,0 +1,15 @@
+{
+  "id": "./",
+  "name": "Somaliland Football",
+  "short_name": "Somaliland FC",
+  "description": "Somaliland football fixtures, competitions and standings in Somali and English.",
+  "lang": "so",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#071a15",
+  "theme_color": "#071a15",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
