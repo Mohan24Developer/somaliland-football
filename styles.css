@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Somaliland Football</title>
+    <meta
+      name="description"
+      content="Somaliland Football app prototype for competitions, fixtures, standings, teams and admin updates."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-badge">SF</div>
+          <div>
+            <p class="eyebrow" data-i18n="brandEyebrow">Somaliland Football</p>
+            <h1 data-i18n="brandTitle">Matchday Hub</h1>
+          </div>
+        </div>
+
+        <nav class="topnav" aria-label="Main navigation">
+          <a href="#home" data-i18n="navHome">Home</a>
+          <a href="#fixtures" data-i18n="navFixtures">Fixtures</a>
+          <a href="#standings" data-i18n="navStandings">Standings</a>
+          <a href="#teams" data-i18n="navTeams">Teams</a>
+          <a href="#admin" data-i18n="navAdmin">Admin</a>
+        </nav>
+
+        <div class="lang-switcher" aria-label="Language switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="so">SO</button>
+        </div>
+      </header>
+
+      <main id="home">
+        <section class="hero-section card">
+          <div class="hero-copy">
+            <p class="kicker" data-i18n="heroKicker">Football network</p>
+            <h2 data-i18n="heroTitle">Somaliland football coverage at a glance</h2>
+            <p data-i18n="heroText">
+              Follow leagues, teams, standings and match results in Somali and English.
+            </p>
+            <div class="cta-row">
+              <a href="#fixtures" class="primary-btn" data-i18n="heroPrimary">See fixtures</a>
+              <a href="#admin" class="secondary-btn" data-i18n="heroSecondary">Open admin</a>
+            </div>
+          </div>
+
+          <div class="hero-stats" id="heroStats"></div>
+        </section>
+
+        <section class="section-header">
+          <div>
+            <p class="eyebrow" data-i18n="competitionsTitleSmall">Featured competitions</p>
+            <h3 data-i18n="competitionsTitle">Leagues and cups</h3>
+          </div>
+        </section>
+        <section id="competitions" class="grid cards-grid competitions-grid"></section>
+
+        <section class="section-header">
+          <div>
+            <p class="eyebrow" data-i18n="fixturesTitleSmall">Live matchday</p>
+            <h3 data-i18n="fixturesTitle">Upcoming and recent fixtures</h3>
+          </div>
+        </section>
+        <section id="fixtures" class="fixtures-wrap"></section>
+
+        <section class="section-header">
+          <div>
+            <p class="eyebrow" data-i18n="standingsTitleSmall">Table tracker</p>
+            <h3 data-i18n="standingsTitle">League standings</h3>
+          </div>
+        </section>
+        <section id="standings" class="table-card card"></section>
+
+        <section class="section-header">
+          <div>
+            <p class="eyebrow" data-i18n="teamsTitleSmall">Clubs</p>
+            <h3 data-i18n="teamsTitle">Featured teams</h3>
+          </div>
+        </section>
+        <section id="teams" class="grid cards-grid teams-grid"></section>
+
+        <section class="section-header">
+          <div>
+            <p class="eyebrow" data-i18n="adminTitleSmall">Control center</p>
+            <h3 data-i18n="adminTitle">Admin dashboard</h3>
+          </div>
+        </section>
+        <section id="admin" class="admin-layout">
+          <div class="card form-card">
+            <h4 data-i18n="adminFormTitle">Add match result</h4>
+            <form id="resultForm">
+              <div class="field-grid">
+                <label>
+                  <span data-i18n="formCompetition">Competition</span>
+                  <select id="competition" required>
+                    <option value="Somaliland Premier League">Somaliland Premier League</option>
+                    <option value="Champions League">Champions League</option>
+                    <option value="FA League">FA League</option>
+                    <option value="Regional Cup">Regional Cup</option>
+                  </select>
+                </label>
+
+                <label>
+                  <span data-i18n="formDate">Date</span>
+                  <input id="matchDate" type="date" required />
+                </label>
+              </div>
+
+              <div class="field-grid two-columns">
+                <label>
+                  <span data-i18n="formHomeTeam">Home team</span>
+                  <select id="homeTeam" required>
+                    <option value="Hargeisa City">Hargeisa City</option>
+                    <option value="Borama FC">Borama FC</option>
+                    <option value="Berbera FC">Berbera FC</option>
+                    <option value="Bosaso FC">Bosaso FC</option>
+                    <option value="Erigavo FC">Erigavo FC</option>
+                    <option value="Sahil FC">Sahil FC</option>
+                  </select>
+                </label>
+
+                <label>
+                  <span data-i18n="formAwayTeam">Away team</span>
+                  <select id="awayTeam" required>
+                    <option value="Hargeisa City">Hargeisa City</option>
+                    <option value="Borama FC">Borama FC</option>
+                    <option value="Berbera FC">Berbera FC</option>
+                    <option value="Bosaso FC">Bosaso FC</option>
+                    <option value="Erigavo FC">Erigavo FC</option>
+                    <option value="Sahil FC">Sahil FC</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="field-grid two-columns">
+                <label>
+                  <span data-i18n="formHomeScore">Home score</span>
+                  <input id="homeScore" type="number" min="0" max="20" value="0" required />
+                </label>
+
+                <label>
+                  <span data-i18n="formAwayScore">Away score</span>
+                  <input id="awayScore" type="number" min="0" max="20" value="0" required />
+                </label>
+              </div>
+
+              <button type="submit" class="primary-btn submit-btn" data-i18n="formSubmit">Save result</button>
+            </form>
+          </div>
+
+          <div class="card summary-card">
+            <h4 data-i18n="adminSummaryTitle">Quick overview</h4>
+            <div class="mini-metrics" id="adminMetrics"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
